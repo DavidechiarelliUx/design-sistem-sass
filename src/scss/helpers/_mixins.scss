@@ -1,0 +1,32 @@
+@mixin flexbox () {
+    display: flex;
+    // display: -webkit-box;
+    // display: -ms-flexbox;
+    // canIuse.com può essere utilizzato come riferimento per aiutare
+    //  gli sviluppatori web a creare stili CSS 
+    //  compatibili con la maggior parte dei browser in circolazione.
+}
+
+// @mixin flexboxCenter () {
+//     display:flex;
+//     justify-content: center;
+//     align-items:center;
+//     font-size: 1rem;
+//     border-radius: 10px;
+// }
+
+@mixin justify-content($value){
+    justify-content:$value;
+}
+
+@mixin align-items($value){
+    align-items:$value;
+}
+
+@mixin centerPosition() {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+

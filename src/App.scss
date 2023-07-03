@@ -1,0 +1,55 @@
+// @import "./scss/all.scss";
+
+
+
+.Container{
+    position: relative;
+    background-color: $colorBackground;
+    @include flexbox();
+    @include justify-content(center);
+    @include align-items(center);
+    
+    .Element{
+        @include centerPosition();
+        border:2px solid red;
+    }
+    
+    ul{
+        color: $colorText;
+        margin: $margin;
+        
+        
+    }
+    li{
+        border: 2px solid red;
+        list-style-type: none;
+    
+}
+}
+.wrapper{
+    position: relative;
+    width: 100vw;
+  
+
+  @include xs {
+    background: purple;
+    
+  }
+
+  @include sm {
+    background: yellow;
+   
+  }
+
+  @include md {
+    background: green;
+  }
+
+  @include lg {
+    background: violet;
+  }
+
+  @include xl {
+    background: orange;
+  }
+}
