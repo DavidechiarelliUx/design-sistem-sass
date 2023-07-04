@@ -1,2 +1,31 @@
-$colorText: dark;
-$colorBackground: #ff9999;
+// Definizione della palette di colori
+
+$color-primary: #007bff;    // blu primario
+$color-secondary: #6c757d;  // grigio scuro
+$color-success: #28a745;    // verde successo
+$color-danger: #dc3545;     // rosso pericolo
+$color-warning: #ffc107;   // giallo avviso
+$color-info: #17a2b8;       // azzurro informazione
+
+// Definizione di altre varianti di colore
+
+$color-light: #f8f9fa;      // grigio chiaro
+$color-dark: #343a40;       // grigio scuro
+$color-muted: #6c757d;      // grigio sbiadito
+$color-white: #ffffff;      // bianco
+$color-black: #000000;      // nero
+
+// Definizione di altre varianti di colore basate sulla palette principale
+
+$color-primary-light: lighten($color-primary, 20%);
+$color-primary-dark: darken($color-primary, 20%);
+$color-secondary-light: lighten($color-secondary, 20%);
+$color-secondary-dark: darken($color-secondary, 20%);
+$color-success-light: lighten($color-success, 20%);
+$color-success-dark: darken($color-success, 20%);
+$color-danger-light: lighten($color-danger, 20%);
+$color-danger-dark: darken($color-danger, 20%);
+$color-warning-light: lighten($color-warning, 20%);
+$color-warning-dark: darken($color-warning, 20%);
+$color-info-light: lighten($color-info, 20%);
+$color-info-dark: darken($color-info, 20%);

@@ -1,55 +1,76 @@
-// @import "./scss/all.scss";
+// // @import "./scss/all.scss";
 
 
 
-.Container{
-    position: relative;
-    background-color: $colorBackground;
-    @include flexbox();
-    @include justify-content(center);
-    @include align-items(center);
+// .Container{
+//     position: relative;
+//     @include flexbox();
+//     @include justify-content(center);
+//     @include align-items(center);
+//     background-color: colorLight($color-primary, 40%);
     
-    .Element{
-        @include centerPosition();
-        border:2px solid red;
-    }
-    
-    ul{
-        color: $colorText;
-        margin: $margin;
+//     .Element{
+//         @include centerPosition();
+//         border:2px solid red;
+//     }
+//     .ElevationTest{
+//     box-shadow: $elevation-small;
+//     transition: $elevation-animation;
+//     }
+//     ul{
+//         margin: $margin;
         
         
-    }
-    li{
-        border: 2px solid red;
-        list-style-type: none;
+//     }
+//     li{
+//         border: 2px solid red;
+//         list-style-type: none;
     
-}
-}
-.wrapper{
-    position: relative;
-    width: 100vw;
+// }
+// }
+// .wrapper{
+//     position: relative;
+//     width: 100vw;
   
 
-  @include xs {
-    background: purple;
+//   @include xs {
+//     background: purple;
     
-  }
+//   }
 
-  @include sm {
-    background: yellow;
-   
-  }
+//   @include sm {
+//     background: yellow;
+  
+//   }
 
-  @include md {
-    background: green;
-  }
+//   @include md {
+//     background: green;
+//   }
 
-  @include lg {
-    background: violet;
-  }
+//   @include lg {
+//     background: violet;
+//   }
 
-  @include xl {
-    background: orange;
-  }
-}
+//   @include xl {
+//     background: orange;
+//   }
+// }
+
+
+// .container{
+  //   width: 100%;
+  //   position: relative;
+  //   max-width: 1440px;
+  //   margin: 0 auto;
+  // }
+  
+  // .row{
+    // width: 100%;
+    // display: flex;
+    // flex-wrap: wrap;
+    //  &.space-between{
+      //   justify-content: space-between;
+      //  }
+      // }
+  
+      

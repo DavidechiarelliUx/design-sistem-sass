@@ -9,9 +9,14 @@ export default defineConfig({
       scss: {
         additionalData: `
           @import "./src/scss/variables/colors.scss";
+          @import "./src/scss/layout/column.scss";
+          @import "./src/scss/variables/animations.scss";
+          @import "./src/scss/variables/elevation.scss";
+          @import "./src/scss/variables/typography.scss";
           @import "./src/scss/variables/margin.scss";
           @import "./src/scss/helpers/mixins.scss";
           @import "./src/scss/helpers/device.scss";
+          @import "./src/scss/helpers/function.scss";
         `,
       },
     },

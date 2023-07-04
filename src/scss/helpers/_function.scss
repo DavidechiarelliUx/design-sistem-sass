@@ -1,0 +1,15 @@
+@use "sass:math";
+
+@function colorDark($color, $percentage) {
+    @return mix(black, $color, $percentage);
+  }
+
+  @function colorLight($color, $percentage) {
+    @return mix(white, $color, $percentage);
+  }
+
+// columns
+// $columnCount:12;
+// @function column($col ){
+//   @return math.div(100%, 12) * $col;
+// }
