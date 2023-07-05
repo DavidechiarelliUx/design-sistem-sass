@@ -47,7 +47,7 @@ $gutter-horizontal: 4rem;
   
     &::after {
         content: "";
-        display: table;
+        display: flex;
         clear: both;
     }
   

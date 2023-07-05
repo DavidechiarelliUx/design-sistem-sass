@@ -3,8 +3,15 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import './App.scss'
+import Button from './components/button'
+import { InputToggle } from "./components/forms";
+
 
 function App() {
+  const [isButtonXl, setIsButtonXl] = useState(false);
+  const toggleButtonXl = () => {
+    setIsButtonXl(!isButtonXl);
+  };
 
 
   return (
@@ -57,7 +64,7 @@ function App() {
   </div>
   
 </div> */}
-    <section className="grid-test">
+    {/* <section className="grid-test">
       <div className="row">
         <div className="col-1-of-2">
           Col 1 of 2
@@ -156,9 +163,24 @@ function App() {
        12 
       </div>
       </div>
-      <h1 typographyy> Questo è l' H1</h1>
-    </section>
+      <h1> Questo è l' H1</h1> */}
+    {/* </section> */}
+    <div onClick={() => toggleButtonXl()}>
+        <Button label="go to" icon iconLeft size="sm" square />
+      </div>
+      <div>
+        <Button label="go to" icon outline size="md" />
+      </div>
+      {isButtonXl && (
+        <div>
+          <Button label="go to" outline size="xl" />
+        </div>
+      )}
+      <div>
+          <Button label="disabled" disabled />
+      </div>
 
+      <InputToggle />
     </>
   )
 }

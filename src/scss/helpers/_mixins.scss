@@ -6,6 +6,15 @@
     //  gli sviluppatori web a creare stili CSS 
     //  compatibili con la maggior parte dei browser in circolazione.
 }
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+@mixin max-width($width) {
+    max-width: $width;
+    width: 100%;
+    margin: 0 auto;
+}
 
 // @mixin flexboxCenter () {
 //     display:flex;
@@ -30,3 +39,30 @@
     transform: translate(-50%, -50%);
   }
 
+@mixin buttonFill ($theme) {
+    @if ($theme == "outline") {
+        background-color: $color-light;
+        border-color: $color-light;
+        color: $color-dark;
+    }
+    @else{
+        background-color: $color-dark;
+        border-color:$color-dark;
+        color: $color-light;
+    }
+}
+
+@mixin buttonSize($size) {
+    @if $size == "xl" {
+    padding: rem($p-sm) rem($p-xl);
+    font-size: rem($buttonXl);
+    } @else if $size == "sm" {
+
+    padding: rem($p-sm) rem($p-sm);
+    font-size: rem($buttonSm);
+    } @else {
+    padding: rem($p-sm) rem($p-md);
+    font-size: rem($buttonMd);
+    }
+  }
+  
