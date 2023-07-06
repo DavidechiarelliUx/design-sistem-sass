@@ -1,0 +1,60 @@
+.selectContainer {
+    position: relative;
+    width: 100%;
+    padding: $p-xs 0;
+  
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: $p-sm;
+      transform: translateY(-50%);
+      width: 0;
+      height: 0;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-top: 6px solid $color-muted;
+      transition: all 0.2s ease-in-out;
+    }
+  
+    &:hover::after {
+      border-top-color: $color-secondary;
+    }
+  
+    &:focus-within::after {
+      transform: translateY(-50%) rotate(180deg);
+      border-top-color: $color-secondary;
+    }
+  }
+  
+  .select {
+    width: 100%;
+    padding: $p-xs $p-sm;
+    border: 1px solid $color-muted;
+    border-radius: $roundedXs;
+    appearance: none;
+  
+    &:focus {
+      outline: none;
+      border-color: $color-secondary;
+    }
+  
+    &::-ms-expand {
+      display: none;
+    }
+  }
+  
+  .select option {
+    font-size: 1rem;
+    font-weight: 400;
+    color: $color-dark;
+    background-color: $color-white;
+  
+    &:hover {
+      background-color: $color-secondary-light;
+    }
+  
+    &:selected {
+      font-weight: 600;
+    }
+  }

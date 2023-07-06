@@ -1,0 +1,88 @@
+.InputForm {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+
+    &.error {
+        border-bottom: 1px solid red;
+    }
+
+    label {
+        display: flex;
+        flex-direction: column;
+
+    .label {
+        margin-bottom: 0.5rem;
+    }
+
+    input {
+        padding: 0.5rem;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 100%;
+        box-sizing: border-box;
+
+        &:focus {
+            outline: none;
+            border-color: #0078d4;
+            box-shadow: 0px 0px 4px #0078d4;
+        }
+    }
+
+    .errorMessage {
+        margin-top: 0.5rem;
+        color: red;
+        font-size: 0.9rem;
+    }
+    }
+}
+.inputForm {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+&.error {
+    border-bottom-style: solid;
+    border-bottom-width:rem(1px) ;
+    border-bottom: 1px solid red;
+}
+label {
+        display: flex;
+        flex-direction: column;
+    .label {
+        margin-bottom: 0.5rem;
+    }
+    .inputWrapper {
+        display: flex;
+        position: relative;
+    .input {
+        padding: 0.5rem;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 100%;
+        box-sizing: border-box;
+    &:focus {
+        outline: none;
+        border-color: #0078d4;
+        box-shadow: 0px 0px 4px #0078d4;
+        }
+    }
+    .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        cursor: pointer;
+        }
+    }
+  .errorMessage {
+    margin-top:rem(7px);
+    color: red;
+    font-size:rem(13px);
+    }
+}
+}

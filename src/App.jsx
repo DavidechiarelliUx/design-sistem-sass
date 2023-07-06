@@ -4,7 +4,15 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import './App.scss'
 import Button from './components/button'
-import { InputToggle } from "./components/forms";
+import {
+  InputText,
+  InputPassword,
+  DropdownSelect,
+  InputToggle,
+  InputSelect,
+  InputEmail,
+} from "./components/forms";
+
 
 
 function App() {
@@ -12,7 +20,33 @@ function App() {
   const toggleButtonXl = () => {
     setIsButtonXl(!isButtonXl);
   };
+  const [inputTextValue, setInputTextValue]= useState();
+  const [InputPasswordValue, setInputPasswordValue]= useState()
+  const [inputDropdownValue, setInpuDropdownValue] = useState();
+  const [inputSelectValue, setInputSelectValue] = useState();
+  const [inputEmailValue, setInputEmailValue] = useState();
 
+  const options = {
+    name: "products",
+    id: "products",
+    options: [
+      {
+        id: 1,
+        label: "Basket",
+        value: "basket",
+      },
+      {
+        id: 2,
+        label: "Soccer",
+        value: "soccer",
+      },
+      {
+        id: 3,
+        label: "Run",
+        value: "run",
+      },
+    ],
+  };
 
   return (
     <>
@@ -165,7 +199,7 @@ function App() {
       </div>
       <h1> Questo è l' H1</h1> */}
     {/* </section> */}
-    <div onClick={() => toggleButtonXl()}>
+    {/* <div onClick={() => toggleButtonXl()}>
         <Button label="go to" icon iconLeft size="sm" square />
       </div>
       <div>
@@ -180,7 +214,39 @@ function App() {
           <Button label="disabled" disabled />
       </div>
 
-      <InputToggle />
+      <InputToggle /> */}
+        <InputText
+        id={"name"}
+        name="name"
+        placeholder="Your name"
+        label={"name"}
+        // error
+        // errorMessage={"Inserisci il tuo nome"}
+        handleChange={setInputTextValue}
+      />
+       <InputPassword
+        id={"password"}
+        name="password"
+        placeholder="Your password"
+        label={"password"}
+        error
+        errorMessage={"Password errata"}
+        handleChange={setInputPasswordValue}
+      />
+       <DropdownSelect options={options} handleChange={setInpuDropdownValue} />
+       <InputSelect
+        options={options}
+        defaultValue={options?.options[0]?.value}
+        handleChange={setInputSelectValue}
+      />
+      <InputEmail
+      id={"email"}
+      name="email"
+      placeholder="your Email"
+      label={"Email"}
+      error
+      errorMessage={"Email errata"}
+      />
     </>
   )
 }

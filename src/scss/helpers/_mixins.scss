@@ -1,68 +1,55 @@
-@mixin flexbox () {
-    display: flex;
-    // display: -webkit-box;
-    // display: -ms-flexbox;
-    // canIuse.com può essere utilizzato come riferimento per aiutare
-    //  gli sviluppatori web a creare stili CSS 
-    //  compatibili con la maggior parte dei browser in circolazione.
-}
 @mixin size($width, $height: $width) {
     width: $width;
     height: $height;
-}
-@mixin max-width($width) {
+  }
+  
+  @mixin max-width($width) {
     max-width: $width;
     width: 100%;
     margin: 0 auto;
-}
-
-// @mixin flexboxCenter () {
-//     display:flex;
-//     justify-content: center;
-//     align-items:center;
-//     font-size: 1rem;
-//     border-radius: 10px;
-// }
-
-@mixin justify-content($value){
-    justify-content:$value;
-}
-
-@mixin align-items($value){
-    align-items:$value;
-}
-
-@mixin centerPosition() {
+  }
+  
+  @mixin flexbox() {
+    display: flex;
+  }
+  
+  @mixin justify-content($value) {
+    justify-content: $value;
+  }
+  
+  @mixin align-items($value) {
+    align-items: $value;
+  }
+  
+  @mixin centerPosition() {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
   }
-
-@mixin buttonFill ($theme) {
+  
+  @mixin buttonFill($theme) {
     @if ($theme == "outline") {
-        background-color: $color-light;
-        border-color: $color-light;
-        color: $color-dark;
-    }
-    @else{
-        background-color: $color-dark;
-        border-color:$color-dark;
-        color: $color-light;
-    }
-}
-
-@mixin buttonSize($size) {
-    @if $size == "xl" {
-    padding: rem($p-sm) rem($p-xl);
-    font-size: rem($buttonXl);
-    } @else if $size == "sm" {
-
-    padding: rem($p-sm) rem($p-sm);
-    font-size: rem($buttonSm);
+      background-color: $color-light;
+      border-color: $color-dark;
+      color: $color-dark;
     } @else {
-    padding: rem($p-sm) rem($p-md);
-    font-size: rem($buttonMd);
+      background-color: $color-dark;
+      border-color: $color-dark;
+      color: $color-light;
+    }
+  }
+  
+  @mixin buttonSize($size) {
+    @if $size == "xl" {
+      padding: rem($p-sm) rem($p-xl);
+      font-size: rem($buttonXl);
+    } @else if $size == "sm" {
+      padding: rem($p-sm) rem($p-sm);
+      font-size: rem($buttonSm);
+    } @else {
+      padding: rem($p-sm) rem($p-md);
+      font-size: rem($buttonMd);
     }
   }
   
