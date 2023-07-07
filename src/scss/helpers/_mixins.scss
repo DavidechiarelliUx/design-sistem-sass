@@ -16,6 +16,11 @@
   @mixin justify-content($value) {
     justify-content: $value;
   }
+  @mixin flexCenter() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   
   @mixin align-items($value) {
     align-items: $value;
@@ -52,4 +57,5 @@
       font-size: rem($buttonMd);
     }
   }
+  
   
