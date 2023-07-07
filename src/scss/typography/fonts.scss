@@ -2,18 +2,18 @@
 
 
 
-// .heading2 {
-//   @extend %heading;
-//   @extend %anchorLink;
-// }
+.heading2 {
+  @extend %heading;
+  @extend %anchorLink;
+}
 
-// .heading3 {
-//   @extend %paragraph;
-// }
+.heading3 {
+  @extend %paragraph;
+}
 
-// .p-small {
-// }
+.p-small {
+}
 
-// .cardProduct {
-//   @extend %heading;
-// }
+.cardProduct {
+  @extend %heading;
+}

@@ -14,7 +14,7 @@ import {
   InputCheckbox,
 } from "./components/forms";
 
-// import Header from './components/header'
+import Header from './components/header'
 
 function App() {
   const [isButtonXl, setIsButtonXl] = useState(false);
@@ -216,7 +216,7 @@ function App() {
       </div>
 
       <InputToggle /> */}
-        <InputText
+        {/* <InputText
         id={"name"}
         name="name"
         placeholder="Your name"
@@ -248,8 +248,8 @@ function App() {
       error
       errorMessage={"Email errata"}
       />
-      <InputCheckbox  />
-      {/* <Header/> */}
+      <InputCheckbox  /> */}
+      <Header/>
     </>
   )
 }
